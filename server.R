@@ -34,7 +34,7 @@ shinyServer(function(input, output, session) {
     if (loc == 'Germany') return(data.frame(lon = 10, lat = 51))
     if (loc == 'India') return(data.frame(lon = 77, lat = 20))
     if (loc == 'Japan') return(data.frame(lon = 135.5, lat = 36.5))
-    if (loc == 'United Kingdom') return(data.frame(lon = -3.5, lat = 54))
+    if (loc == 'UK and Ireland') return(data.frame(lon = -3.5, lat = 54))
     if (loc == 'United States') return(data.frame(lon = -100, lat = 35))
 
   }
@@ -342,12 +342,12 @@ shinyServer(function(input, output, session) {
   })
 
   ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ## [Output]: Interactive Map (United Kingdom)
+  ## [Output]: Interactive Map (United Kingdom and Ireland)
   ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   output$map_uk <- renderUI({
 
     ## Create map_base
-    map_base <- create_map(map_country = 'United Kingdom', map_zoom = 6)
+    map_base <- create_map(map_country = 'UK and Ireland', map_zoom = 6)
 
     ## Generate HTML code, fix invalid multibyte strings and return
     html_out <- HTML(map_base$html(chartId = "map_uk"))

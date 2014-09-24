@@ -71,30 +71,30 @@ shinyUI(navbarPage(title = "R User Groups Around the World",
                               tabPanel("Japan",
                                        tags$style('.leaflet {height: 600px;}'),
                                        showOutput('map_japan', 'leaflet')),
-                              tabPanel("United Kingdom",
+                              tabPanel("UK and Ireland",
                                        tags$style('.leaflet {height: 600px;}'),
                                        showOutput('map_uk', 'leaflet'))
                               
                    ),
                    
                    ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                   ## Tab "Data"
+                   ## Tab "Data" (Disabled for Now)
                    ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                    
-                   navbarMenu("Data", 
-                              tabPanel("Data (Original)",
-                                       HTML("<h3>Original RUGs Data from Revolution Analytics</h3>"),
-                                       downloadButton('dl_ori', 'Download CSV'),
-                                       HTML("<p> <br></p>"),
-                                       dataTableOutput("data_original")
-                              ),
-                              tabPanel("Data (Modified)",
-                                       HTML("<h3>Modified RUGs Data with Lat/Lon Info</h3>"),
-                                       downloadButton('dl_mod', 'Download CSV'),
-                                       HTML("<p> <br></p>"),
-                                       dataTableOutput("data_modified")
-                              )
-                   ),
+#                    navbarMenu("Data", 
+#                               tabPanel("Data (Original)",
+#                                        HTML("<h3>Original RUGs Data from Revolution Analytics</h3>"),
+#                                        downloadButton('dl_ori', 'Download CSV'),
+#                                        HTML("<p> <br></p>"),
+#                                        dataTableOutput("data_original")
+#                               ),
+#                               tabPanel("Data (Modified)",
+#                                        HTML("<h3>Modified RUGs Data with Lat/Lon Info</h3>"),
+#                                        downloadButton('dl_mod', 'Download CSV'),
+#                                        HTML("<p> <br></p>"),
+#                                        dataTableOutput("data_modified")
+#                               )
+#                    ),
                    
                    ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                    ## Tab "More"
